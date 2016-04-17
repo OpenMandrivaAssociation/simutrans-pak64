@@ -1,16 +1,17 @@
-%define	majver	112
-%define	minver	3
+%define	majver	120
+%define	minver	1
+%define minminver 2
 %define	pak	pak64
 
 Summary:	A complete Simutrans game data package with 64x64 tiles
 Name:		simutrans-%{pak}
-Version:	0.%{majver}.%{minver}
-Release:	2
+Version:	0.%{majver}.%{minver}%{?%{minminver}:.%{minminver}}
+Release:	1
 License:	Artistic
 Group:		Games/Strategy
 URL:		http://www.simutrans.com
 BuildArch:	noarch
-Source0:	http://tenet.dl.sourceforge.net/project/simutrans/%pak/%majver-%minver/simu%pak-%majver-%minver.zip
+Source0:	http://heanet.dl.sourceforge.net/project/simutrans/%pak/%majver-%minver/simu%pak-%majver-%minver-%{minminver}.zip
 Provides:	simutrans-pak = %EVRD
 Requires:	simutrans
 
@@ -26,7 +27,7 @@ chmod 0755 . simutrans simutrans/pak
 chmod 0755 simutrans/pak/*
 chmod 0755 simutrans/pak/*/*
 chmod 0755 simutrans/pak/*/*/*
-find . -type f |xargs chmod 0644
+find . -type f -exec chmod 0644 {} \;
 
 %install
 mkdir -p %{buildroot}%{_datadir}/simutrans
