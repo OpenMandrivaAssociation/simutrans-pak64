@@ -1,17 +1,12 @@
-%define	majver	120
-%define	minver	1
-%define minminver 2
-%define	pak	pak64
-
 Summary:	A complete Simutrans game data package with 64x64 tiles
-Name:		simutrans-%{pak}
-Version:	0.%{majver}.%{minver}%{?%{minminver}:.%{minminver}}
+Name:		simutrans-pak64
+Version:	123.0
 Release:	1
 License:	Artistic
 Group:		Games/Strategy
 URL:		http://www.simutrans.com
 BuildArch:	noarch
-Source0:	http://heanet.dl.sourceforge.net/project/simutrans/%pak/%majver-%minver/simu%pak-%majver-%minver-%{minminver}.zip
+Source0:	https://downloads.sourceforge.net/project/simutrans/pak64/%(echo %{version} |sed -e 's,\.,-,g')/simupak64-%(echo %{version} |sed -e 's,\.,-,g').zip
 Provides:	simutrans-pak = %EVRD
 Requires:	simutrans
 
