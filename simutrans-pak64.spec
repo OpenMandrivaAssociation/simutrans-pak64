@@ -4,7 +4,7 @@ Version:	124.1.1
 Release:	1
 License:	Artistic
 Group:		Games/Strategy
-URL:		http://www.simutrans.com
+URL:		https://www.simutrans.com
 BuildArch:	noarch
 Source0:	https://downloads.sourceforge.net/project/simutrans/pak64/%(echo %{version} |sed -e 's,\.,-,g')/simupak64-%(echo %{version} |sed -e 's,\.,-,g').zip
 Provides:	simutrans-pak = %EVRD
