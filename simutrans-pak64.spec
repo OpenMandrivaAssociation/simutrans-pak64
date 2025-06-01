@@ -1,6 +1,6 @@
 Summary:	A complete Simutrans game data package with 64x64 tiles
 Name:		simutrans-pak64
-Version:	124.2.2
+Version:	124.3
 Release:	1
 License:	Artistic
 Group:		Games/Strategy
